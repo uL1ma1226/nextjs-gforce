@@ -8,10 +8,10 @@ import { getProducts } from "@/app/lib/data";
 // }
 
 export default async function CardWrapper() {
-  const productModel = await getProducts();
+  // const productModel = await getProducts();
   return (
     <>
-      <Card title={productModel} value="$2000" productType="GPU" />
+      <Card title="RTX 4090" value="$2000" productType="GPU" />
       <Card title="RTX 4090" value="$2000" productType="GPU" />
       <Card title="RTX 4090" value="$2000" productType="GPU" />
     </>
