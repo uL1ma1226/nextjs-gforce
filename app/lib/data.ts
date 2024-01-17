@@ -16,12 +16,9 @@ export async function getUser(email: string) {
 export async function getProducts(model: string, type: string) {
   noStore();
   try {
-    const productModel =
-      await sql<Product>`SELECT * FROM products WHERE model=${model}`;
-    // const productType =
-    //   await sql<Product>`SELECT * FROM products WHERE type=${type}`;
-
-    return { productModel };
+    const productsModel =
+      await sql<Product>`SELECT products.model FROM products`;
+    return productsModel;
   } catch (error) {
     console.error("Database Error:", error);
   }
